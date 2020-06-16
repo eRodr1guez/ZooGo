@@ -1,6 +1,4 @@
-# MERN Bolierplate
-
-Author: Ernesto Rodriguez
+# ZOO GO
 
 ## Description
 
