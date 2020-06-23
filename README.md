@@ -2,7 +2,7 @@
 
 ## Description
 
-Reach Mobile Web Application designed to drive animal education via Trivia Games. Children walk the Zoo, once at the animal exhibition, they have to scan a qr code to verify their location, and then they are prompted with a trivia game. They win Points for answering questions correctly, and once they have gain enough points, they can redeem them for prizes.
+React-based App designed to drive animal education via Trivia Games. Children walk the Zoo, once at the animal exhibition, they have to scan a qr code to verify their location, and then they are prompted with a trivia game. They win Points for answering questions correctly, and once they have gain enough points, they can redeem them for prizes.
 
 ## Interface
 ### Please click the image to see the full demo of the app
