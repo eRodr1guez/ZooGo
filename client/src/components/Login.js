@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "../assets/css/login.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
- 
+
 import Giraffe from "../assets/images/giraffe.png";
 
 export default class Login extends Component {
@@ -48,7 +48,7 @@ export default class Login extends Component {
             className="giraffe mt-3 mb-5"
           />
         </div>
-        <div className="center-div">
+        <div className="">
           <h1>Hello again!</h1>
           <div className="form">
             <input
@@ -70,10 +70,10 @@ export default class Login extends Component {
             </button>
           </div>
           <p>
-            Don't have an account? <Link to="/signup">Sign Up</Link>
+            Don't have an account? <Link to="/register">Register</Link>
           </p>
         </div>
-        <div className="blue-box"></div>
+        {/* <div className="blue-box"></div> */}
       </div>
     );
   }

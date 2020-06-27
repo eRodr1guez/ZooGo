@@ -1,0 +1,28 @@
+.register {
+  background-color: #2b7f06;
+  text-align: center;
+  height: 100vh;
+}
+
+.register .form button a {
+  font-weight: bold;
+  color: #035300;
+  text-decoration: none;
+}
+
+.zebra {
+  margin: 0 auto;
+  max-width: 190px;
+}
+
+@media only screen and (max-height: 640px) {
+  .zebra {
+    padding-bottom: 1em;
+  }
+}
+
+@media only screen and (min-height: 641px) {
+  .zebra {
+    padding-bottom: 2.5em;
+  }
+}
