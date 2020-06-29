@@ -7,7 +7,7 @@ import { GlobalContext, initialState, reducer } from "./store";
 
 import Landing from "./components/Landing";
 import Home from "./components/Home";
-import SignUp from "./components/SignUp";
+import Register from "./components/Register";
 import Login from "./components/Login";
 import AnimalPage from "./components/AnimalPage";
 import QrPage from "./components/QrPage";
@@ -26,7 +26,7 @@ const App = () => {
       <Router>
         <Route exact path="/" component={Landing} />
         <Route path="/home" component={Home} />
-        <Route path="/signup" component={SignUp} />
+        <Route path="/register" component={Register} />
         <Route path="/login" component={Login} />
         <Route path="/qrpage" component={QrPage} />
         <Route path="/scanner" component={Scanner} />

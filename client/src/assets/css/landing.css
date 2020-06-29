@@ -40,9 +40,9 @@
 }
 
 /* targeting iphone 5 screen size */
-@media only screen and (max-height: 630px) {
+@media only screen and (max-height: 650px) {
   .landing .content .logo {
-    width: 180px;
+    width: 150px;
   }
 
   .landing .content .discover-icon {
