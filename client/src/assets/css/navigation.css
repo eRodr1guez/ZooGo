@@ -1,0 +1,84 @@
+.navigation {
+  width: 100vw;
+  z-index: 3;
+  padding: 0 20px 3vh;
+
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}
+
+.navigation .wrapper {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 50px;
+  background-color: #abd5f9;
+  padding: 15px 15px 10px;
+  margin: auto;
+
+  display: flex;
+  justify-content: space-around;
+
+  -webkit-box-shadow: 0px 0px 38px -15px rgba(74, 74, 74, 1);
+  -moz-box-shadow: 0px 0px 38px -15px rgba(74, 74, 74, 1);
+  box-shadow: 0px 0px 38px -15px rgba(74, 74, 74, 1);
+}
+
+.navigation .wrapper img {
+  width: 35px;
+  height: 30px;
+}
+
+.navigation .wrapper p {
+  margin: 0;
+  font-size: 12px;
+  text-align: center;
+}
+
+/* .main-navbar {
+  justify-content:center;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+}
+
+.nav-icon {
+  height: 100%;
+  width: 100%;
+}
+
+.home-btn {
+  background-color: #9fd6fd;
+  border-radius: 0 0 25px 25px;
+}
+
+.points-btn {
+  background-color: #baf471;
+  border-radius: 0 0 25px 25px;
+}
+.points-info {
+  align-items: center;
+  position: absolute;
+  right: 15px;
+}
+.points-info h2 {
+  padding-top: 10px;
+  line-height: 0.6em;
+}
+.larger-font {
+  font-size: 1.2em;
+}
+
+small {
+  font-size: 60%;
+}
+
+.single {
+  width: 100px;
+  margin: 0 auto;
+}
+
+.single img {
+  width: 50%;
+  height: 50%;
+} */

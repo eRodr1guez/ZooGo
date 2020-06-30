@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Spinner from "react-bootstrap/Spinner";
 
 export default class Loading extends Component {
   render() {
@@ -7,9 +6,9 @@ export default class Loading extends Component {
 
     return (
       <div style={container}>
-        <Spinner animation="grow" className="spinner">
+        <div className="spinner-grow text-success" role="status">
           <span className="sr-only">Loading...</span>
-        </Spinner>
+        </div>
       </div>
     );
   }

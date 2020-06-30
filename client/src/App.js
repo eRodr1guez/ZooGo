@@ -17,6 +17,7 @@ import Correct from "./components/Correct";
 import Incorrect from "./components/Incorrect";
 import Redeem from "./components/Redeem";
 import Prizes from "./components/Prizes";
+import Navigation from "./components/Navigation";
 
 const App = () => {
   const [globalState, dispatch] = React.useReducer(reducer, initialState);
@@ -33,6 +34,8 @@ const App = () => {
       </div>
       <div className="main">
         <Router>
+          <Navigation />
+
           <Route exact path="/" component={Landing} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />

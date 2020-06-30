@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import QrReader from "react-qr-reader";
-import Navbar from "./Navbar";
 import Container from "react-bootstrap/Container";
 import { GlobalContext } from "../store";
 import { withRouter } from "react-router-dom";
