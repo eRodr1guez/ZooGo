@@ -1,0 +1,19 @@
+.trivia {
+  background-color: #0846b8;
+  min-height: 100vh;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  background-image: url("../images/trivia_bgrd.svg");
+  background-position: center;
+  /* background-repeat: repeat-y;
+  background-size: 500px; */
+}
+
+.trivia .trivia-btn {
+  background-color: #022179;
+  text-transform: uppercase;
+  width: 180px;
+  display: block;
+  margin: 0 auto;
+}

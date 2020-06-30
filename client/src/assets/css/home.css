@@ -1,19 +1,17 @@
 .home {
   background-color: #f5f5f5;
-  min-height: 100vh;
+  height: 100vh;
   text-align: center;
-}
 
-.home .center-div {
-  width: 100%;
-  z-index: 2;
+  /* mkae page scrollable */
+  overflow: auto;
+  position: relative;
 }
 
 .home h1 {
   width: 50%;
   max-width: 160px;
   margin: 0 auto;
-  /* padding: 50px 0 10px; */
 }
 
 .home p {
@@ -92,5 +90,5 @@
 }
 
 .spinner {
-  background-color:#57bd12;
+  background-color: #57bd12;
 }

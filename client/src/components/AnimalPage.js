@@ -3,26 +3,14 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import "../assets/css/animal-page.css";
 import Container from "react-bootstrap/Container";
-import Navbar from "./Navbar";
 
 import CoinsIcon from "../assets/images/coins_yellow.svg";
 import { GlobalContext } from "../store";
 
 export default class AnimalPage extends Component {
-  // componentDidMount() {
-  //   this.context.dispatch({
-  //     type: "setCurrentAnimal",
-  //     payload: this.props.match.params.id,
-  //   });
-  //   // axios.get(`/api/animals/${this.props.match.params.id}`).then((res) => {
-  //   //   this.setState({ currentAnimal: res.data });
-  //   // });
-  // }
-
   render() {
     return (
-      <Container fluid>
-        <Navbar />
+      <Container className="text-center animal">
         <img
           src={this.context.globalState.currentAnimal.picture}
           alt={this.context.globalState.currentAnimal.name}

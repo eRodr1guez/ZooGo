@@ -34,18 +34,14 @@ class Scanner extends Component {
   render() {
     return (
       <div>
-        <Navbar />
-        <Container className="text-center">
-          <h2 className="font-blue worksans-light py-4">
-            Scan the code with your camera to play!
-          </h2>
+        {/* <Navbar /> */}
+        <Container className="center-div">
           <QrReader
             delay={500}
             onError={this.handleError}
             onScan={this.handleScan}
-            style={{ width: "100%" }}
+            style={{ width: "100%", maxWidth: "400px", margin: "auto" }}
           />
-          {/* <p className="font-blue worksans-light">{this.state.result}</p> */}
         </Container>
       </div>
     );

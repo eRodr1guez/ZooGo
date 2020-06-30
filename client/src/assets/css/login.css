@@ -1,14 +1,15 @@
 .login {
   text-align: center;
   height: 100vh;
-  width: 100vw;
 }
 
-.login .center-div {
-  width: 80%;
-  max-width: 260px;
-  z-index: 2;
-  /* top:75%; */
+.login .content {
+  width: 100%;
+}
+
+.login img {
+  width: 190px;
+  margin: 0 auto 30px;
 }
 
 .login h1 {
@@ -21,14 +22,11 @@
 
 .login .form input::placeholder {
   color: #145fd2;
-  font-weight: bold;
 }
 
 .login .form button {
   background-color: #13d089;
   color: #145fd2;
-  font-weight: bold;
-  padding: 10px 40px;
 }
 
 .login .form button a {
@@ -39,47 +37,29 @@
 
 .login p {
   color: #145fd2;
-  font-size: 20px;
+  max-width: 260px;
+  margin: auto;
 }
 
 .login a {
-  color: #145fd2;
-  text-decoration: underline;
+  color: #13d089;
 }
 
-.giraffe {
-  margin: 0 auto;
-}
-
-/* targeting iphone 5 screen size */
-@media only screen and (max-height: 630px) {
-  .giraffe {
-    width: 70%;
+@media only screen and (min-height: 636px) {
+  .login .content h1 {
+    font-size: 40px;
   }
-}
 
-/* targeting ipad screen size */
-@media only screen and (min-width: 620px) {
-  .giraffe {
-    width: 35%;
+  .login .content .form {
+    font-size: 18px;
   }
-}
 
-/* targeting large screen sizes */
-@media screen and (min-width: 1400px) {
-  .giraffe {
-    width: 15%;
+  .login .content p,
+  .login .content p a {
+    font-size: 20px;
   }
-}
 
-/* Hiding arrow controls from input - Chrome, Safari, Edge, Opera */
-input::-webkit-outer-spin-button,
-input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
-}
-
-/* Hiding arrow controls from input - Firefox */
-input[type=number] {
-  -moz-appearance: textfield;
+  .login .form button {
+    font-size: 20px;
+  }
 }

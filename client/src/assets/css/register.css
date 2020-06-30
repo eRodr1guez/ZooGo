@@ -4,25 +4,80 @@
   height: 100vh;
 }
 
-.register .form button a {
+.register .content h1 {
+  color: #fdd329;
+}
+
+.register .form input::placeholder {
+  color: #035300;
+}
+
+.register .form button {
   font-weight: bold;
   color: #035300;
   text-decoration: none;
 }
 
-.zebra {
-  margin: 0 auto;
-  max-width: 190px;
+.register .content p {
+  color: #fff;
 }
 
-@media only screen and (max-height: 640px) {
-  .zebra {
+.register .content p a {
+  color: #fdd329;
+}
+
+.register img {
+  margin: 0 auto;
+  width: 150px;
+}
+
+@media only screen and (max-height: 635px) {
+  .register .content img {
     padding-bottom: 1em;
   }
 }
 
-@media only screen and (min-height: 641px) {
-  .zebra {
-    padding-bottom: 2.5em;
+@media only screen and (min-height: 636px) {
+  .register .content h1 {
+    font-size: 40px;
+  }
+
+  .register .content .form {
+    font-size: 18px;
+  }
+
+  .register .content p,
+  .register .content p a {
+    font-size: 20px;
+  }
+
+  .register .form button {
+    font-size: 20px;
+  }
+
+  .register .content img {
+    width: 170px;
+    padding-bottom: 3em;
+  }
+}
+
+@media only screen and (min-height: 736px) {
+  .register .content img {
+    width: 200px;
+    padding-bottom: 4em;
+  }
+}
+
+@media only screen and (min-height: 810px) {
+  .register .content img {
+    width: 220px;
+    padding-bottom: 5em;
+  }
+}
+
+@media only screen and (min-height: 925px) {
+  .register .content img {
+    width: 250px;
+    padding-bottom: 10em;
   }
 }

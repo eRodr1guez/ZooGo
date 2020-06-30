@@ -36,23 +36,10 @@
 .correct .bttn {
   max-width: 300px;
   margin: 0 auto;
+  color: #06746b;
 }
 
 .correct .center,
 .correct a {
   z-index: 2;
-}
-
-.pattern-bg {
-  position: absolute;
-  height: 50vh;
-  bottom: 0;
-  left: 0;
-  background-image: url("../images/animal-spots-green.svg");
-  background-size: 30rem;
-  z-index: 1;
-}
-
-.pattern-bg img {
-  height: 100%;
 }

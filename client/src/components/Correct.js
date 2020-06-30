@@ -21,8 +21,6 @@ export default class Correct extends Component {
         <Link className="bttn yellow-bg" to="/home">
           Find more animals
         </Link>
-
-        <div className="pattern-bg"></div>
       </div>
     );
   }
