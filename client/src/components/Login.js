@@ -40,15 +40,8 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login">
-        <div>
-          <img
-            src={Giraffe}
-            width="100%"
-            alt="Giraffe"
-            className="giraffe mt-3 mb-5"
-          />
-        </div>
-        <div className="">
+        <div className="content center-div">
+          <img src={Giraffe} width="100%" alt="Giraffe" />
           <h1>Hello again!</h1>
           <div className="form">
             <input
@@ -65,7 +58,7 @@ export default class Login extends Component {
               name="birthYear"
               onChange={this.handleInputChange}
             />
-            <button className="nunito-font mt-1" onClick={this.login}>
+            <button className="nunito-font" onClick={this.login}>
               Login
             </button>
           </div>
@@ -73,7 +66,6 @@ export default class Login extends Component {
             Don't have an account? <Link to="/register">Register</Link>
           </p>
         </div>
-        {/* <div className="blue-box"></div> */}
       </div>
     );
   }

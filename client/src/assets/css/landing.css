@@ -1,31 +1,31 @@
-.landing .start {
+.landing {
   height: 100vh;
   background-color: #f5f5f5;
   text-align: center;
 }
 
-.landing .start .content {
+.landing .content {
   width: 80%;
   max-width: 400px;
   z-index: 3;
 }
 
-.landing .start .content .logo {
+.landing .content .logo {
   width: 210px;
 }
 
-.landing .start .content .discover-icon {
+.landing .content .discover-icon {
   width: 200px;
   display: block;
   margin: 35px auto;
 }
 
-.landing .start .content p {
+.landing .content p {
   font-size: 19px;
   margin: 10px 0 40px;
 }
 
-.landing .start .green-box {
+.landing .green-box {
   height: 15vh;
   width: 100vw;
   background-image: url("../images/zigzag.svg");
@@ -41,16 +41,16 @@
 
 /* targeting iphone 5 screen size */
 @media only screen and (max-height: 650px) {
-  .landing .start .content .logo {
+  .landing .content .logo {
     width: 150px;
   }
 
-  .landing .start .content .discover-icon {
+  .landing .content .discover-icon {
     width: 150px;
     margin: 10px auto 20px;
   }
 
-  .landing .start .content p {
+  .landing .content p {
     font-size: 16px;
     margin: 10px 0 40px;
   }
@@ -58,50 +58,12 @@
 
 /* targeting ipad screen size */
 @media only screen and (min-width: 620px) {
-  .landing .start .content .discover-icon {
+  .landing .content .discover-icon {
     width: 260px;
   }
 
-  .landing .start .content p {
+  .landing .content p {
     font-size: 25px;
     margin: 15px 0 50px;
-  }
-}
-
-/* styles for screen resize message ui */
-.landing .resize-msg {
-  display: none;
-  text-align: center;
-  width: 90%;
-  max-width: 850px;
-}
-
-.landing .resize-msg img {
-  margin-top: 40px;
-  width: 400px;
-}
-
-.landing .resize-msg h1 {
-  margin-top: 40px;
-  font-size: 40px;
-}
-
-@media only screen and (min-height: 1025px) {
-  .landing .start {
-    display: none;
-  }
-
-  .landing .resize-msg {
-    display: block;
-  }
-}
-
-@media only screen and (min-width: 1025px) {
-  .landing .start {
-    display: none;
-  }
-
-  .landing .resize-msg {
-    display: block;
   }
 }
