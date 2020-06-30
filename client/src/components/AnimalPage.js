@@ -20,7 +20,7 @@ export default class AnimalPage extends Component {
 
   render() {
     return (
-      <Container fluid>
+      <Container className="text-center animal">
         <img
           src={this.context.globalState.currentAnimal.picture}
           alt={this.context.globalState.currentAnimal.name}
