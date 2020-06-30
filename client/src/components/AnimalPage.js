@@ -1,48 +1,48 @@
-import React, { Component } from "react";
-// import axios from "axios";
-import { Link } from "react-router-dom";
-import "../assets/css/animal-page.css";
-import Container from "react-bootstrap/Container";
+// import React, { Component } from "react";
+// // import axios from "axios";
+// import { Link } from "react-router-dom";
+// import "../assets/css/animal-page.css";
+// import Container from "react-bootstrap/Container";
 
-import CoinsIcon from "../assets/images/coins_yellow.svg";
-import { GlobalContext } from "../store";
+// import CoinsIcon from "../assets/images/coins_yellow.svg";
+// import { GlobalContext } from "../store";
 
-export default class AnimalPage extends Component {
-  render() {
-    return (
-      <Container className="text-center animal">
-        <img
-          src={this.context.globalState.currentAnimal.picture}
-          alt={this.context.globalState.currentAnimal.name}
-          width="100%"
-          className="animal-img my-4"
-        />
-        <h2 className="nunito-font animal-title">
-          {this.context.globalState.currentAnimal.name}
-        </h2>
-        <h3 className="nunito-font animal-subtitle mb-3">
-          Home: {this.context.globalState.currentAnimal.origin}
-        </h3>
-        <p className="animal-description mb-4">
-          {this.context.globalState.currentAnimal.description}
-        </p>
-        <div className="text-center pt-2">
-          <Link to="/trivia-page">
-            <button className="nunito-font mb-5">
-              <img
-                className="pr-2"
-                src={CoinsIcon}
-                width="60px"
-                alt="coins icon"
-              />
-              Get Points!
-            </button>
-          </Link>
-        </div>
-        <div className="coral-box"></div>
-      </Container>
-    );
-  }
-}
+// export default class AnimalPage extends Component {
+//   render() {
+//     return (
+//       <Container className="text-center animal">
+//         <img
+//           src={this.context.globalState.currentAnimal.picture}
+//           alt={this.context.globalState.currentAnimal.name}
+//           width="100%"
+//           className="animal-img my-4"
+//         />
+//         <h2 className="nunito-font animal-title">
+//           {this.context.globalState.currentAnimal.name}
+//         </h2>
+//         <h3 className="nunito-font animal-subtitle mb-3">
+//           Home: {this.context.globalState.currentAnimal.origin}
+//         </h3>
+//         <p className="animal-description mb-4">
+//           {this.context.globalState.currentAnimal.description}
+//         </p>
+//         <div className="text-center pt-2">
+//           <Link to="/trivia-page">
+//             <button className="nunito-font mb-5">
+//               <img
+//                 className="pr-2"
+//                 src={CoinsIcon}
+//                 width="60px"
+//                 alt="coins icon"
+//               />
+//               Get Points!
+//             </button>
+//           </Link>
+//         </div>
+//         <div className="coral-box"></div>
+//       </Container>
+//     );
+//   }
+// }
 
-AnimalPage.contextType = GlobalContext;
+// AnimalPage.contextType = GlobalContext;

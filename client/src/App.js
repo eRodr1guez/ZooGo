@@ -6,9 +6,9 @@ import "./assets/css/main.css";
 import { GlobalContext, initialState, reducer } from "./store";
 
 import Landing from "./components/Landing";
-import Home from "./components/Home";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import Home from "./components/Home";
 import AnimalPage from "./components/AnimalPage";
 import QrPage from "./components/QrPage";
 import Scanner from "./components/Scanner";
@@ -41,8 +41,8 @@ const App = () => {
           <Route path="/login" component={Login} />
           <Route path="/home" component={Home} />
           <Route path="/qrpage" component={QrPage} />
-          <Route path="/scanner" component={Scanner} />
-          <Route path="/animal-page" component={AnimalPage} />
+          {/* <Route path="/scanner" component={Scanner} /> */}
+          {/* <Route path="/animal-page" component={AnimalPage} /> */}
           <Route path="/trivia-page" component={Trivia} />
           <Route path="/correct" component={Correct} />
           <Route path="/incorrect" component={Incorrect} />

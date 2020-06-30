@@ -1,11 +1,6 @@
 .home {
-  height: 100vh;
   text-align: center;
-  padding: 30px 0 100px;
-
-  /* mkae page scrollable */
-  overflow: auto;
-  position: relative;
+  padding: 50px 0 150px;
 }
 
 .home h1 {

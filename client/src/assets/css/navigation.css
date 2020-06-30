@@ -33,6 +33,23 @@
   margin: 0;
   font-size: 12px;
   text-align: center;
+  color: #007bff;
+}
+
+.navigation .wrapper .coins {
+  display: flex;
+  align-items: center;
+}
+
+.navigation .wrapper .coins img {
+  width: 40px;
+  height: 40px;
+}
+
+.navigation .wrapper .coins p {
+  font-size: 25px;
+  padding-left: 5px;
+  font-weight: bold;
 }
 
 /* .main-navbar {

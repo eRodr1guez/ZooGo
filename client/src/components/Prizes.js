@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-import Row from "react-bootstrap/Row";
-import Col from "react-bootstrap/Col";
-
 import "../assets/css/prizes.css";
 import PointsIcon from "../assets/images/gift-icon.svg";
 import CoinIcon from "../assets/images/coin.svg";
@@ -50,8 +47,8 @@ export default class Prizes extends Component {
           </div>
           <p>Choose your prize below</p>
 
-          <Row className="my-4" onClick={this.toggleHidden.bind(this)}>
-            <Col xs={6}>
+          <div className="my-4" onClick={this.toggleHidden.bind(this)}>
+            <div xs={6}>
               {!this.state.isHidden && <Check />}
               <img
                 src={Soda}
@@ -59,8 +56,8 @@ export default class Prizes extends Component {
                 width="100%"
                 className="prize-item"
               />
-            </Col>
-            <Col xs={6} className="text-left">
+            </div>
+            <div xs={6} className="text-left">
               <h3 className="nunito-font font-blue">Fountain Drink</h3>
 
               <h4 className="font-grey">
@@ -72,18 +69,18 @@ export default class Prizes extends Component {
                 />
                 70 points
               </h4>
-            </Col>
-          </Row>
-          <Row className="my-4">
-            <Col xs={6}>
+            </div>
+          </div>
+          <div className="my-4">
+            <div xs={6}>
               <img
                 src={Popcorn}
                 alt="popcorn tub"
                 width="100%"
                 className="prize-item"
               />
-            </Col>
-            <Col xs={6} className="text-left">
+            </div>
+            <div xs={6} className="text-left">
               <h3 className="nunito-font font-red">Popcorn Tub</h3>
               <h4 className="font-grey">
                 <img
@@ -94,18 +91,18 @@ export default class Prizes extends Component {
                 />
                 100 points
               </h4>
-            </Col>
-          </Row>
-          <Row className="my-4">
-            <Col xs={6}>
+            </div>
+          </div>
+          <div className="my-4">
+            <div xs={6}>
               <img
                 src={Pizza}
                 alt="pizza slice"
                 width="100%"
                 className="prize-item"
               />
-            </Col>
-            <Col xs={6} className="text-left">
+            </div>
+            <div xs={6} className="text-left">
               <h3 className="nunito-font font-green">Pizza Slice</h3>
               <h4 className="font-grey">
                 <img
@@ -116,8 +113,8 @@ export default class Prizes extends Component {
                 />
                 130 points
               </h4>
-            </Col>
-          </Row>
+            </div>
+          </div>
 
           <button
             onClick={() => console.log("sub")}
