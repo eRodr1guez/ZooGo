@@ -26,16 +26,17 @@ const App = () => {
       <div className="resize-msg center-div">
         <img src={require("./assets/images/zooGo_logo.svg")} alt="logo" />
         <h1>
-          For the best user experience this app has been optimized for phones and tablets up to 768px X
-          1024px. To use the app please resize your screen.
+          For the best user experience this app has been optimized for phones
+          and tablets up to 768px X 1024px. To use the app please resize your
+          screen.
         </h1>
       </div>
       <div className="main">
         <Router>
           <Route exact path="/" component={Landing} />
-          <Route path="/home" component={Home} />
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
+          <Route path="/home" component={Home} />
           <Route path="/qrpage" component={QrPage} />
           <Route path="/scanner" component={Scanner} />
           <Route path="/animal-page" component={AnimalPage} />

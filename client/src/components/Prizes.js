@@ -3,7 +3,6 @@ import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
-import HomeNavbar from "./HomeNav";
 
 import "../assets/css/prizes.css";
 import PointsIcon from "../assets/images/gift-icon.svg";
@@ -37,9 +36,8 @@ export default class Prizes extends Component {
   render() {
     return (
       <Container>
-        <HomeNavbar />
         <div className="prizes">
-          <div className="center-div">
+          <div className="">
             <img
               src={PointsIcon}
               alt="Click here to redeem your points"

@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import "../assets/css/home.css";
 import AnimalGrid from "./AnimalGrid";
-import Navbar from "./Navbar";
 
 import EyesIcon from "../assets/images/eyes_icon.svg";
 import { GlobalContext } from "../store";
@@ -10,8 +9,7 @@ export default class Home extends Component {
   render() {
     return (
       <div className="home">
-        <Navbar />
-        <div className="center-div">
+        <div className="">
           <img src={EyesIcon} alt="eyes icon" className="eyes-icon mt-5" />
           <h1 className="font-green mt-2">Howdy explorer!</h1>
           <p>Click on an animal to get started!</p>

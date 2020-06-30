@@ -1,7 +1,8 @@
 import React, { Component } from "react";
+import axios from "axios";
 import "../assets/css/register.css";
 import { Link } from "react-router-dom";
-import axios from "axios";
+import Loading from "./Loading";
 
 export default class Register extends Component {
   state = {
@@ -9,6 +10,8 @@ export default class Register extends Component {
     email: "",
     username: "",
     birthYear: "",
+    errMsg: "",
+    loading: false,
   };
 
   handleInputChange = (e) => {
@@ -17,23 +20,37 @@ export default class Register extends Component {
     });
   };
 
-  signUp = () => {
-    const user = {
-      username: this.state.username,
-      name: this.state.name,
-      password: this.state.birthYear,
-      email: this.state.email,
-    };
-    axios.post("/api/registerUser", user).then((result) => {
-      console.log(result);
-      localStorage.setItem("user", JSON.stringify(result.data));
-      this.props.history.push("/home");
-    });
+  register = () => {
+    if (
+      this.state.name &&
+      this.state.email &&
+      this.state.username &&
+      this.state.birthYear
+    ) {
+      this.setState({ loading: true });
+
+      const user = {
+        username: this.state.username,
+        name: this.state.name,
+        password: this.state.birthYear,
+        email: this.state.email,
+      };
+
+      axios.post("/api/registerUser", user).then((result) => {
+        this.setState({ loading: false });
+
+        localStorage.setItem("user", JSON.stringify(result.data));
+        this.props.history.push("/home");
+      });
+    } else {
+      this.setState({ errMsg: "Please enter your credentials." });
+    }
   };
 
   render() {
     return (
       <div className="register">
+        {this.state.loading ? <Loading /> : null}
         <div className="content">
           <img src={require("../assets/images/zebra.png")} alt="Zebra" />
 
@@ -68,8 +85,12 @@ export default class Register extends Component {
               name="birthYear"
               onChange={this.handleInputChange}
             />
-
-            <button className="nunito-font yellow-bg" onClick={this.signUp}>
+            {this.state.errMsg ? (
+              <h1 style={{ color: "red", fontSize: "16px" }}>
+                {this.state.errMsg}
+              </h1>
+            ) : null}
+            <button className="nunito-font yellow-bg" onClick={this.register}>
               Submit
             </button>
           </div>
