@@ -12,7 +12,7 @@ import Login from "./components/Login";
 import AnimalPage from "./components/AnimalPage";
 import QrPage from "./components/QrPage";
 import Scanner from "./components/Scanner";
-import TriviaPage from "./components/TriviaPage";
+import Trivia from "./components/Trivia";
 import Correct from "./components/Correct";
 import Incorrect from "./components/Incorrect";
 import Redeem from "./components/Redeem";
@@ -40,7 +40,7 @@ const App = () => {
           <Route path="/qrpage" component={QrPage} />
           <Route path="/scanner" component={Scanner} />
           <Route path="/animal-page" component={AnimalPage} />
-          <Route path="/trivia-page" component={TriviaPage} />
+          <Route path="/trivia-page" component={Trivia} />
           <Route path="/correct" component={Correct} />
           <Route path="/incorrect" component={Incorrect} />
           <Route path="/redeem" component={Redeem} />

@@ -45,7 +45,7 @@ export default class Login extends Component {
   render() {
     return (
       <div className="login">
-        {this.state.loading ? <Loading /> : null}
+        {this.state.loading && <Loading />}
 
         <div className="content center-div">
           <img src={Giraffe} width="100%" alt="Giraffe" />
@@ -65,11 +65,11 @@ export default class Login extends Component {
               name="birthYear"
               onChange={this.handleInputChange}
             />
-            {this.state.errMsg ? (
+            {this.state.errMsg && (
               <h1 style={{ color: "red", fontSize: "16px" }}>
                 {this.state.errMsg}
               </h1>
-            ) : null}
+            )}
             <button className="nunito-font" onClick={this.login}>
               Login
             </button>

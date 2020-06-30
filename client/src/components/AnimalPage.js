@@ -8,16 +8,6 @@ import CoinsIcon from "../assets/images/coins_yellow.svg";
 import { GlobalContext } from "../store";
 
 export default class AnimalPage extends Component {
-  // componentDidMount() {
-  //   this.context.dispatch({
-  //     type: "setCurrentAnimal",
-  //     payload: this.props.match.params.id,
-  //   });
-  //   // axios.get(`/api/animals/${this.props.match.params.id}`).then((res) => {
-  //   //   this.setState({ currentAnimal: res.data });
-  //   // });
-  // }
-
   render() {
     return (
       <Container className="text-center animal">

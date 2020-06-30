@@ -50,7 +50,7 @@ export default class Register extends Component {
   render() {
     return (
       <div className="register">
-        {this.state.loading ? <Loading /> : null}
+        {this.state.loading && <Loading />}
         <div className="content">
           <img src={require("../assets/images/zebra.png")} alt="Zebra" />
 
@@ -85,11 +85,11 @@ export default class Register extends Component {
               name="birthYear"
               onChange={this.handleInputChange}
             />
-            {this.state.errMsg ? (
+            {this.state.errMsg && (
               <h1 style={{ color: "red", fontSize: "16px" }}>
                 {this.state.errMsg}
               </h1>
-            ) : null}
+            )}
             <button className="nunito-font yellow-bg" onClick={this.register}>
               Submit
             </button>
