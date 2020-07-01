@@ -1,13 +1,17 @@
 .trivia {
+  height: 100vh;
   background-color: #0846b8;
-  min-height: 100vh;
-  height: 100%;
   text-align: center;
-  position: relative;
   background-image: url("../images/trivia_bgrd.svg");
   background-position: center;
-  /* background-repeat: repeat-y;
-  background-size: 500px; */
+}
+
+.trivia .content {
+  position: absolute;
+  width: 90%;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .trivia .trivia-btn {

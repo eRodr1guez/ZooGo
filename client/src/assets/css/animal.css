@@ -1,14 +1,16 @@
 .animal {
-  height: 100vh;
-  /* mkae page scrollable */
-  overflow: auto;
-  position: relative;
+  text-align: center;
+  padding-bottom: 100px;
+  padding-top: 30px;
+  width: 90%;
+  margin: auto;
 }
 
 .animal-img {
   border-radius: 30px;
   margin: 0 auto;
 }
+
 .animal-title {
   color: #b61d2f;
 }

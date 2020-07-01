@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Spinner from "react-bootstrap/Spinner";
 
 export default class Loading extends Component {
   render() {
@@ -7,9 +6,9 @@ export default class Loading extends Component {
 
     return (
       <div style={container}>
-        <Spinner animation="grow" className="spinner">
+        <div className="spinner-border" role="status">
           <span className="sr-only">Loading...</span>
-        </Spinner>
+        </div>
       </div>
     );
   }
@@ -17,9 +16,10 @@ export default class Loading extends Component {
 
 const styles = {
   container: {
-    height: "100vh",
+    height: "100%",
     width: "100vw",
     position: "absolute",
+    overflow: "hidden",
     top: 0,
     left: 0,
     display: "flex",

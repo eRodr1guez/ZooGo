@@ -65,11 +65,9 @@ export default class Login extends Component {
               name="birthYear"
               onChange={this.handleInputChange}
             />
-            {this.state.errMsg && (
-              <h1 style={{ color: "red", fontSize: "16px" }}>
-                {this.state.errMsg}
-              </h1>
-            )}
+            <h1 style={{ color: "red", fontSize: "16px" }}>
+              {this.state.errMsg}
+            </h1>
             <button className="nunito-font" onClick={this.login}>
               Login
             </button>

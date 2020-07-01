@@ -1,12 +1,11 @@
 import React, { Component } from "react";
 import QrReader from "react-qr-reader";
-import Navbar from "./Navbar";
-import Container from "react-bootstrap/Container";
 import { GlobalContext } from "../store";
 import { withRouter } from "react-router-dom";
 import axios from "axios";
+import "../assets/css/scan.css";
 
-class Scanner extends Component {
+class Scan extends Component {
   handleScan = (data) => {
     if (data) {
       let data2 = JSON.parse(data);
@@ -23,7 +22,7 @@ class Scanner extends Component {
       // // logging to confirm data
       // console.log(data2.id);
 
-      this.props.history.push(`/animal-page`);
+      this.props.history.push(`/animal`);
     }
   };
 
@@ -33,20 +32,25 @@ class Scanner extends Component {
 
   render() {
     return (
-      <div>
-        {/* <Navbar /> */}
-        <Container className="center-div">
+      <div className="scan">
+        <div className="content">
+          <img src={require("../assets/images/qr-icon.svg")} alt="scan icon" />
+
+          <p className="worksans-light">
+            Scan the QR-Code near the animal's exhibition to play!
+          </p>
+
           <QrReader
             delay={500}
             onError={this.handleError}
             onScan={this.handleScan}
             style={{ width: "100%", maxWidth: "400px", margin: "auto" }}
           />
-        </Container>
+        </div>
       </div>
     );
   }
 }
 
-Scanner.contextType = GlobalContext;
-export default withRouter(Scanner);
+Scan.contextType = GlobalContext;
+export default withRouter(Scan);

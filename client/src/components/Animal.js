@@ -1,16 +1,12 @@
 import React, { Component } from "react";
-// import axios from "axios";
-import { Link } from "react-router-dom";
-import "../assets/css/animal-page.css";
-import Container from "react-bootstrap/Container";
-
-import CoinsIcon from "../assets/images/coins_yellow.svg";
+import "../assets/css/animal.css";
 import { GlobalContext } from "../store";
+import { Link } from "react-router-dom";
 
 export default class AnimalPage extends Component {
   render() {
     return (
-      <Container className="text-center animal">
+      <div className="animal">
         <img
           src={this.context.globalState.currentAnimal.picture}
           alt={this.context.globalState.currentAnimal.name}
@@ -27,11 +23,11 @@ export default class AnimalPage extends Component {
           {this.context.globalState.currentAnimal.description}
         </p>
         <div className="text-center pt-2">
-          <Link to="/trivia-page">
+          <Link to="/trivia">
             <button className="nunito-font mb-5">
               <img
                 className="pr-2"
-                src={CoinsIcon}
+                src={require("../assets/images/coins_yellow.svg")}
                 width="60px"
                 alt="coins icon"
               />
@@ -39,8 +35,7 @@ export default class AnimalPage extends Component {
             </button>
           </Link>
         </div>
-        <div className="coral-box"></div>
-      </Container>
+      </div>
     );
   }
 }
