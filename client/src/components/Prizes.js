@@ -1,18 +1,19 @@
 import React, { Component } from "react";
+import { GlobalContext } from "../store";
+import { Link } from "react-router-dom";
 
 import "../assets/css/prizes.css";
-import PointsIcon from "../assets/images/gift-icon.svg";
 import CoinIcon from "../assets/images/coin.svg";
 import Soda from "../assets/images/soda.jpg";
 import Popcorn from "../assets/images/popcorn.jpg";
 import Pizza from "../assets/images/pizza.jpg";
 
-import BlueCheckmarkIcon from "../assets/images/checkmark_blue.svg";
-import { Link } from "react-router-dom";
-import { GlobalContext } from "../store";
-
 const Check = () => (
-  <img src={BlueCheckmarkIcon} alt="Prize selected" className="checkmark" />
+  <img
+    src={require("../assets/images/checkmark_blue.svg")}
+    alt="Prize selected"
+    className="checkmark"
+  />
 );
 
 export default class Prizes extends Component {
@@ -34,7 +35,7 @@ export default class Prizes extends Component {
       <div className="prizes">
         <div className="">
           <img
-            src={PointsIcon}
+            src={require("../assets/images/gift-icon.svg")}
             alt="Click here to redeem your points"
             className="prizes-icon mt-5"
           />
@@ -42,7 +43,7 @@ export default class Prizes extends Component {
           <div className="points-box m-4 py-4">
             <h2 className="font-blue nunito-font">
               You have <br />
-              {this.context.globalState.currentAccount.points} points
+              {this.context.globalState.currentAccount.points} coins
             </h2>
           </div>
           <p>Choose your prize below</p>

@@ -1,0 +1,19 @@
+.scan {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.scan .content {
+  width: 80%;
+  max-width: 400px;
+  margin: auto;
+}
+
+.scan .content img {
+  width: 70px;
+  margin-bottom: 12px;
+}
+
+.scan .content p {
+  font-size: 18px;
+}

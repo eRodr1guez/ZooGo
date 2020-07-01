@@ -34,35 +34,35 @@ class Trivia extends Component {
     return (
       <div className="trivia">
         <div className="content">
-          <div className="center-div">
-            <img
-              src={require("../assets/images/star_icon.svg")}
-              width="40px"
-              alt="star icon"
-            />
-            <h1 className="font-yellow">Trivia time!</h1>
-            <p className="text-light mt-5">True or False</p>
-            <h3 className="nunito-font text-light">
-              {this.state.trivia.question}
-            </h3>
-            <div className="mt-4">
-              <span>
-                <button
-                  className="trivia-btn nunito-font mb-2"
-                  onClick={() => this.checkAnswer("1")}
-                >
-                  True
-                </button>
-                <button
-                  className="trivia-btn nunito-font"
-                  onClick={() => this.checkAnswer("0")}
-                >
-                  False
-                </button>
-              </span>
-            </div>
+          {/* <div className="center-div"> */}
+          <img
+            src={require("../assets/images/star_icon.svg")}
+            width="40px"
+            alt="star icon"
+          />
+          <h1 className="font-yellow">Trivia time!</h1>
+          <p className="text-light mt-5">True or False</p>
+          <h3 className="nunito-font text-light">
+            {this.state.trivia.question}
+          </h3>
+          <div className="mt-4">
+            <span>
+              <button
+                className="trivia-btn nunito-font mb-2"
+                onClick={() => this.checkAnswer("1")}
+              >
+                True
+              </button>
+              <button
+                className="trivia-btn nunito-font"
+                onClick={() => this.checkAnswer("0")}
+              >
+                False
+              </button>
+            </span>
           </div>
         </div>
+        {/* </div> */}
       </div>
     );
   }

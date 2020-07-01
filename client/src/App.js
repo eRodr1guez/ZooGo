@@ -9,9 +9,8 @@ import Landing from "./components/Landing";
 import Register from "./components/Register";
 import Login from "./components/Login";
 import Home from "./components/Home";
-import AnimalPage from "./components/AnimalPage";
-import QrPage from "./components/QrPage";
-import Scanner from "./components/Scanner";
+import Animal from "./components/Animal";
+import Scan from "./components/Scan";
 import Trivia from "./components/Trivia";
 import Correct from "./components/Correct";
 import Incorrect from "./components/Incorrect";
@@ -40,10 +39,9 @@ const App = () => {
           <Route path="/register" component={Register} />
           <Route path="/login" component={Login} />
           <Route path="/home" component={Home} />
-          <Route path="/qrpage" component={QrPage} />
-          {/* <Route path="/scanner" component={Scanner} /> */}
-          {/* <Route path="/animal-page" component={AnimalPage} /> */}
-          <Route path="/trivia-page" component={Trivia} />
+          <Route path="/scan" component={Scan} />
+          <Route path="/animal" component={Animal} />
+          <Route path="/trivia" component={Trivia} />
           <Route path="/correct" component={Correct} />
           <Route path="/incorrect" component={Incorrect} />
           <Route path="/redeem" component={Redeem} />
