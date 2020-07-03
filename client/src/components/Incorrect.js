@@ -18,7 +18,7 @@ export default class Incorrect extends Component {
           </h2>
         </div>
 
-        <Link className="bttn yellow-bg" to="/home">
+        <Link className="bttn yellow-bg" to="/">
           Find more animals
         </Link>
 

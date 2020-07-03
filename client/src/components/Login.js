@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { GlobalContext } from "../store/index";
 import "../assets/css/login.css";
 import { Link } from "react-router-dom";
 import axios from "axios";
@@ -33,8 +34,13 @@ export default class Login extends Component {
         .post("/api/login", user)
         .then((result) => {
           this.setState({ loading: false });
-          localStorage.setItem("user", JSON.stringify(result.data));
-          this.props.history.push("/home");
+
+          this.context.dispatch({
+            type: "updateUser",
+            payload: result.data,
+          });
+
+          this.props.history.push("/");
         })
         .catch(console.error);
     } else {
@@ -80,3 +86,5 @@ export default class Login extends Component {
     );
   }
 }
+
+Login.contextType = GlobalContext;

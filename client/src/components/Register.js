@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { GlobalContext } from "../store";
+import { Link, withRouter } from "react-router-dom";
+
 import axios from "axios";
 import "../assets/css/register.css";
-import { Link } from "react-router-dom";
 import Loading from "./Loading";
 
-export default class Register extends Component {
+class Register extends Component {
   state = {
     name: "",
     email: "",
@@ -39,7 +41,11 @@ export default class Register extends Component {
       axios.post("/api/registerUser", user).then((result) => {
         this.setState({ loading: false });
 
-        localStorage.setItem("user", JSON.stringify(result.data));
+        this.context.dispatch({
+          type: "updateUser",
+          payload: result.data,
+        });
+
         this.props.history.push("/home");
       });
     } else {
@@ -101,3 +107,6 @@ export default class Register extends Component {
     );
   }
 }
+
+Register.contextType = GlobalContext;
+export default withRouter(Register);
