@@ -22,7 +22,7 @@ const App = () => {
   });
 
   const displayHandler = () => {
-    if (!localStorage.getItem("user")) {
+    if (!localStorage.getItem("user") || !globalState.currentAccount) {
       return <Authentication />;
     } else {
       return <Main />;

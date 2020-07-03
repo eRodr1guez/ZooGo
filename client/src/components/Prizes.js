@@ -12,7 +12,7 @@ class Prizes extends Component {
     points: 0,
   };
 
-  componentDidUpdate() {
+  componentDidMount() {
     let user = JSON.parse(localStorage.getItem("user"));
     if (this.state.points !== user.points) {
       this.setState({ points: user.points });
