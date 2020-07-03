@@ -1,7 +1,11 @@
-/* optimized for iphone x */
 .redeem {
   text-align: center;
-  height: 100vh;
+  width: 85%;
+  max-width: 340px;
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  transform: translate(-50%, -50%);
 }
 
 .redeem .coins {
@@ -14,29 +18,17 @@
   font-size: 35px;
 }
 
-.redeem p {
+.redeem p,
+h4 {
   font-size: 18px;
 }
 
-.redeem .item {
-  width: 240px;
-  border-radius: 50px;
+.redeem .box {
+  background-color: #fdd329;
+  border-radius: 30px;
+  padding: 40px;
 }
 
-.redeem h3 {
-  margin-top: 18px;
+.redeem .box h4 {
   font-weight: bold;
-}
-
-.redeem .bottom {
-  background-image: url("../images/zigzag_yellow.svg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  padding: 60px 20px 40px;
-  position: absolute;
-  bottom: 0;
-}
-
-.redeem .bottom h4 {
-  font-size: 14px;
 }

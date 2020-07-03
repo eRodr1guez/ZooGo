@@ -5,19 +5,14 @@ import "../assets/css/navigation.css";
 import { Link } from "react-router-dom";
 
 export default class Navigation extends Component {
-  componentDidMount() {
-    if (this.context.globalState.currentAccount.points === 0) {
-      let user = JSON.parse(localStorage.getItem("user"));
+  state = {
+    points: 0,
+  };
 
-      this.context.dispatch({
-        type: "updatePoints",
-        payload: user.points,
-      });
-    } else {
-      localStorage.setItem(
-        "points",
-        this.context.globalState.currentAccount.points
-      );
+  componentDidUpdate() {
+    let user = JSON.parse(localStorage.getItem("user"));
+    if (this.state.points !== user.points) {
+      this.setState({ points: user.points });
     }
   }
 
@@ -25,7 +20,7 @@ export default class Navigation extends Component {
     return (
       <div className="navigation">
         <div className="wrapper">
-          <Link to="/home">
+          <Link to="/">
             <img
               src={require("../assets/images/home-icon.svg")}
               alt="Home Icon"
@@ -46,7 +41,7 @@ export default class Navigation extends Component {
               src={require("../assets/images/coins_blue.svg")}
               alt="Home Icon"
             />
-            <p>{this.context.globalState.currentAccount.points}</p>
+            <p>{this.state.points}</p>
           </div>
         </div>
       </div>

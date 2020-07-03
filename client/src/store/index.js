@@ -2,17 +2,39 @@ import React from "react";
 
 export const GlobalContext = React.createContext();
 export const initialState = {
-  currentAccount: {
-    username: "", //use userid instead
-    points: 0,
-  },
+  currentAccount: null,
   animals: [],
-  currentAnimal: {},
+  currentAnimal: null,
+};
+
+const saveToLocalStorage = (data) => {
+  localStorage.setItem("user", JSON.stringify(data.currentAccount));
 };
 
 export const reducer = (state, action) => {
   switch (action.type) {
-    case "addPoints":
+    case "updateUser": {
+      const newState = {
+        ...state,
+        currentAccount: {
+          id: action.payload.id,
+          name: action.payload.name,
+          username: action.payload.username,
+          points: action.payload.points,
+        },
+      };
+      saveToLocalStorage(newState);
+      return newState;
+    }
+    case "logout": {
+      const newState = {
+        ...state,
+        currentAccount: null,
+      };
+      localStorage.deleteItem("user");
+      return newState;
+    }
+    case "addPoints": {
       const newState = {
         ...state,
         currentAccount: {
@@ -20,34 +42,33 @@ export const reducer = (state, action) => {
           points: action.payload + state.currentAccount.points,
         },
       };
+      saveToLocalStorage(newState);
       return newState;
-    case "updatePoints":
-      localStorage.setItem("points", action.payload);
-      return {
+    }
+    case "subtractPoints": {
+      const newState = {
         ...state,
         currentAccount: {
           ...state.currentAccount,
-          points: action.payload,
+          points: action.payload - state.currentAccount.points,
         },
       };
-    case "storeAnimals":
+      saveToLocalStorage(newState);
+      return newState;
+    }
+    case "storeAnimals": {
       return {
         ...state,
         animals: action.payload,
       };
-    case "setCurrentAnimal":
-      // const currentAnimal = state.animals.find(
-      //   // eslint-disable-next-line
-      //   (animal) => animal.id == action.payload
-      // );
-      // console.log(currentAnimal);
+    }
+    case "setCurrentAnimal": {
       return {
         ...state,
         currentAnimal: action.payload,
       };
-
+    }
     default:
       return state;
-    // break;
   }
 };

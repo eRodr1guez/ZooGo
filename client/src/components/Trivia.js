@@ -1,14 +1,13 @@
 import React, { Component } from "react";
 import "../assets/css/trivia.css";
 
-import { initialState, GlobalContext } from "../store";
+import { GlobalContext } from "../store";
 import { withRouter } from "react-router-dom";
 
 class Trivia extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      ...initialState,
       trivia: {},
     };
   }
@@ -34,7 +33,6 @@ class Trivia extends Component {
     return (
       <div className="trivia">
         <div className="content">
-          {/* <div className="center-div"> */}
           <img
             src={require("../assets/images/star_icon.svg")}
             width="40px"
@@ -62,7 +60,6 @@ class Trivia extends Component {
             </span>
           </div>
         </div>
-        {/* </div> */}
       </div>
     );
   }
