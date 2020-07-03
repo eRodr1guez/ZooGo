@@ -1,25 +1,33 @@
 import React from "react";
-import { BrowserRouter as Router, Route } from "react-router-dom";
 
-import "./assets/css/main.css";
+import "./assets/css/app.css";
 
 import { GlobalContext, initialState, reducer } from "./store";
 
-import Landing from "./components/Landing";
-import Register from "./components/Register";
-import Login from "./components/Login";
-import Home from "./components/Home";
-import Animal from "./components/Animal";
-import Scan from "./components/Scan";
-import Trivia from "./components/Trivia";
-import Correct from "./components/Correct";
-import Incorrect from "./components/Incorrect";
-import Redeem from "./components/Redeem";
-import Prizes from "./components/Prizes";
-import Navigation from "./components/Navigation";
+import Authentication from "./containers/Authentication";
+import Main from "./containers/Main";
 
 const App = () => {
   const [globalState, dispatch] = React.useReducer(reducer, initialState);
+
+  React.useEffect(() => {
+    if (!globalState.currentAccount && localStorage.getItem("user")) {
+      let user = JSON.parse(localStorage.getItem("user"));
+
+      dispatch({
+        type: "updateUser",
+        payload: user,
+      });
+    }
+  });
+
+  const displayHandler = () => {
+    if (!localStorage.getItem("user")) {
+      return <Authentication />;
+    } else {
+      return <Main />;
+    }
+  };
 
   return (
     <GlobalContext.Provider value={{ globalState, dispatch }}>
@@ -31,23 +39,7 @@ const App = () => {
           screen.
         </h1>
       </div>
-      <div className="main">
-        <Router>
-          <Navigation />
-
-          <Route exact path="/" component={Landing} />
-          <Route path="/register" component={Register} />
-          <Route path="/login" component={Login} />
-          <Route path="/home" component={Home} />
-          <Route path="/scan" component={Scan} />
-          <Route path="/animal" component={Animal} />
-          <Route path="/trivia" component={Trivia} />
-          <Route path="/correct" component={Correct} />
-          <Route path="/incorrect" component={Incorrect} />
-          <Route path="/redeem" component={Redeem} />
-          <Route path="/prizes" component={Prizes} />
-        </Router>
-      </div>
+      <div className="main">{displayHandler()}</div>
     </GlobalContext.Provider>
   );
 };

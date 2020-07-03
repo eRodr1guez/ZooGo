@@ -8,21 +8,16 @@ import "../assets/css/scan.css";
 class Scan extends Component {
   handleScan = (data) => {
     if (data) {
-      let data2 = JSON.parse(data);
-      axios.get(`/api/animals/${data2.id}`).then((res) => {
-        //this.setState({ currentAnimal: res.data });
-        console.log(res.data);
+      let animal = JSON.parse(data);
+
+      axios.get(`/api/animals/${animal.id}`).then((res) => {
         this.context.dispatch({
           type: "setCurrentAnimal",
           payload: res.data,
         });
+
+        this.props.history.push(`/animal`);
       });
-
-      // // Update here what to do with the data
-      // // logging to confirm data
-      // console.log(data2.id);
-
-      this.props.history.push(`/animal`);
     }
   };
 
