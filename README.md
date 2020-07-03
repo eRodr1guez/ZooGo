@@ -12,6 +12,7 @@ React-based App designed to drive animal education via Trivia Games. Children wa
 - `npm run client` initialize react server
 
 client run on port 3000 and express server runs on port 5000
+
 **QR Codes** to access the animal informatio and trivia game you will need the qr codes provided [here.](https://drive.google.com/file/d/1WlDCcvEfygRsSqGhH3-saj70bcxOBDrP/view?usp=sharing)
 
 ## Interface
