@@ -17,7 +17,6 @@ const Main = () => {
       <Navigation />
 
       <Switch>
-        <Route component={Home} />
         <Route path="/scan" component={Scan} />
         <Route path="/animal" component={Animal} />
         <Route path="/trivia" component={Trivia} />
@@ -25,6 +24,7 @@ const Main = () => {
         <Route path="/incorrect" component={Incorrect} />
         <Route path="/prizes" component={Prizes} />
         <Route path="/redeem" component={Redeem} />
+        <Route component={Home} />
       </Switch>
     </Router>
   );
