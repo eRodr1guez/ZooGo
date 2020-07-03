@@ -46,7 +46,7 @@ class Register extends Component {
           payload: result.data,
         });
 
-        this.props.history.push("/home");
+        this.props.history.push("/");
       });
     } else {
       this.setState({ errMsg: "Please enter your credentials." });
