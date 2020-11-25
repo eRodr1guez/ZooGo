@@ -16,10 +16,8 @@ client run on port 3000 and express server runs on port 5000
 **QR Codes** to access the animal information and trivia game you will need the qr codes provided [here.](https://drive.google.com/file/d/1WlDCcvEfygRsSqGhH3-saj70bcxOBDrP/view?usp=sharing)
 
 ## Interface
-### Please click the image to see the full demo of the app
-[![Interface](https://ucarecdn.com/c099d731-8ee6-4687-9084-fa2472e39ecf/ScreenShot20200623at124316AM1.png)](https://www.youtube.com/watch?v=429ZNpMUzcQ&feature=youtu.be)
-
+[](https://ucarecdn.com/c099d731-8ee6-4687-9084-fa2472e39ecf/ScreenShot20200623at124316AM1.png)
 ## Deployed
-You can find the deployed app [here.](https://zoo-go.herokuapp.com/)
+You can find the deployed app [here.](https://zoogo.herokuapp.com/)
 
 
