@@ -3,19 +3,18 @@ import { Link } from "react-router-dom";
 
 import "../assets/css/landing.css";
 
+import logo from "../assets/images/zooGo_logo.svg";
+import discoverIcon from "../assets/images/discover_icon.svg";
+
 export default class Landing extends Component {
   render() {
     return (
       <div className="landing">
         <div className="content center-div">
-          <img
-            className="logo"
-            src={require("../assets/images/zooGo_logo.svg")}
-            alt="logo"
-          />
+          <img className="logo" src={logo} alt="logo" />
           <img
             className="discover-icon"
-            src={require("../assets/images/discover_icon.svg")}
+            src={discoverIcon}
             alt="discover icon"
           />
           <h1 className="font-green">Welcome!</h1>

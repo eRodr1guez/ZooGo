@@ -7,6 +7,8 @@ import { GlobalContext, initialState, reducer } from "./store";
 import Authentication from "./containers/Authentication";
 import Main from "./containers/Main";
 
+import logo from "./assets/images/zooGo_logo.svg";
+
 const App = () => {
   const [globalState, dispatch] = React.useReducer(reducer, initialState);
 
@@ -32,7 +34,7 @@ const App = () => {
   return (
     <GlobalContext.Provider value={{ globalState, dispatch }}>
       <div className="resize-msg center-div">
-        <img src={require("./assets/images/zooGo_logo.svg")} alt="logo" />
+        <img src={logo} alt="logo" />
         <h1>
           For the best user experience this app has been optimized for phones
           and tablets up to 768px X 1024px. To use the app please resize your

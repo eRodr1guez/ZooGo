@@ -6,6 +6,8 @@ import axios from "axios";
 import "../assets/css/register.css";
 import Loading from "./Loading";
 
+import zebra from "../assets/images/zebra.png";
+
 class Register extends Component {
   state = {
     name: "",
@@ -58,7 +60,7 @@ class Register extends Component {
       <div className="register">
         {this.state.loading && <Loading />}
         <div className="content">
-          <img src={require("../assets/images/zebra.png")} alt="Zebra" />
+          <img src={zebra} alt="Zebra" />
 
           <h1>Register</h1>
 
