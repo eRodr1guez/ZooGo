@@ -6,6 +6,10 @@ import { MDBContainer, MDBRow, MDBCol } from "mdbreact";
 
 import "../assets/css/prizes.css";
 import CoinIcon from "../assets/images/coin.svg";
+import giftIcon from "../assets/images/gift-icon.svg";
+import soda from "../assets/images/soda.jpg";
+import popcorn from "../assets/images/popcorn.jpg";
+import pizza from "../assets/images/pizza.jpg";
 
 class Prizes extends Component {
   state = {
@@ -36,7 +40,7 @@ class Prizes extends Component {
     return (
       <div className="prizes">
         <img
-          src={require("../assets/images/gift-icon.svg")}
+          src={giftIcon}
           alt="Click here to redeem your points"
           className="prizes-icon mt-5"
         />
@@ -52,11 +56,7 @@ class Prizes extends Component {
         <MDBContainer onClick={() => this.redeem(70)}>
           <MDBRow>
             <MDBCol size="6">
-              <img
-                src={require("../assets/images/soda.jpg")}
-                alt="fountain drink"
-                className="prize-item"
-              />
+              <img src={soda} alt="fountain drink" className="prize-item" />
             </MDBCol>
             <MDBCol size="6">
               <h3 className="nunito-font font-blue">Drink</h3>
@@ -71,11 +71,7 @@ class Prizes extends Component {
         <MDBContainer onClick={() => this.redeem(100)}>
           <MDBRow>
             <MDBCol size="6">
-              <img
-                src={require("../assets/images/popcorn.jpg")}
-                alt="popcorn"
-                className="prize-item"
-              />
+              <img src={popcorn} alt="popcorn" className="prize-item" />
             </MDBCol>
             <MDBCol size="6">
               <h3 className="nunito-font font-blue">Popcorn</h3>
@@ -90,11 +86,7 @@ class Prizes extends Component {
         <MDBContainer onClick={() => this.redeem(120)}>
           <MDBRow>
             <MDBCol size="6">
-              <img
-                src={require("../assets/images/pizza.jpg")}
-                alt="Pizza Slice"
-                className="prize-item"
-              />
+              <img src={pizza} alt="Pizza Slice" className="prize-item" />
             </MDBCol>
             <MDBCol size="6">
               <h3 className="nunito-font font-blue">Pizza</h3>

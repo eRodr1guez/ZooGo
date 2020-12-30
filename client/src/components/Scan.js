@@ -5,6 +5,8 @@ import { withRouter } from "react-router-dom";
 import axios from "axios";
 import "../assets/css/scan.css";
 
+import scanIcon from "../assets/images/qr-icon.svg";
+
 class Scan extends Component {
   handleScan = (data) => {
     if (data) {
@@ -29,7 +31,7 @@ class Scan extends Component {
     return (
       <div className="scan">
         <div className="content">
-          <img src={require("../assets/images/qr-icon.svg")} alt="scan icon" />
+          <img src={scanIcon} alt="scan icon" />
 
           <p className="worksans-light">
             Scan the QR-Code near the animal's exhibition to play!

@@ -4,6 +4,10 @@ import { GlobalContext } from "../store";
 import "../assets/css/navigation.css";
 import { Link } from "react-router-dom";
 
+import homeIcon from "../assets/images/home-icon.svg";
+import giftIcon from "../assets/images/gift-icon.svg";
+import coinsIcon from "../assets/images/coins_blue.svg";
+
 export default class Navigation extends Component {
   state = {
     points: 0,
@@ -21,26 +25,17 @@ export default class Navigation extends Component {
       <div className="navigation">
         <div className="wrapper">
           <Link to="/">
-            <img
-              src={require("../assets/images/home-icon.svg")}
-              alt="Home Icon"
-            />
+            <img src={homeIcon} alt="Home Icon" />
             <p>Home</p>
           </Link>
 
           <Link to="/prizes">
-            <img
-              src={require("../assets/images/gift-icon.svg")}
-              alt="Home Icon"
-            />
+            <img src={giftIcon} alt="Gift Icon" />
             <p>Prizes</p>
           </Link>
 
           <div className="coins">
-            <img
-              src={require("../assets/images/coins_blue.svg")}
-              alt="Home Icon"
-            />
+            <img src={coinsIcon} alt="Coins Icon" />
             <p>{this.state.points}</p>
           </div>
         </div>
